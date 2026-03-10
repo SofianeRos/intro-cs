@@ -7,8 +7,12 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
-
-        var unStylo = new Pen("black");
-        Console.WriteLine(unStylo);
+        var unStylo = new Pen("BlAcK");
+        Console.WriteLine(unStylo.Color);
+        // Le set étant protected, on n'y a pas accès d'ici
+        // unStylo.Color = "red";
+        
+        unStylo.Write("bonjour");
+        unStylo.Write();
     }
 }
