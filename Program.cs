@@ -13,6 +13,7 @@ class Program
         // unStylo.Color = "red";
         
         unStylo.Write("bonjour");
+        Console.WriteLine("----------------");
         unStylo.Write();
     }
 }

@@ -44,13 +44,21 @@ public class Pen
 
     public void Write(string message)
     {
-        Console.WriteLine(message);
+        // \x = prefixe pour ecrire un code en hexadecimal
+        // 1B = code hexadecimale de l'emplacement du caractere "echap (esc)" dans la table de caractere 
+        // [38 = indique le formatage du texte 
+        // [48= Indique le formatage du fond 
+        // :5 indique qu'on utilise le mode 256 couleurs 
+        // :code = code de la couleur souhaiter 
+        // m = Indicateur de fin de l'instruction 
+        Console.WriteLine("\x1B[38;5;175m" + message);
     }
 
     // Surcharge de méthode qui s'appuie sur la méthode d'origine
     public void Write()
     {
         this.Write("Mon message par défault");
+        
     }
     
     
