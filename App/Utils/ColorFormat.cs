@@ -34,6 +34,11 @@ public static class ColorFormat
         return $"\x1B[0m";
     }
 
+    public static string GetStyleCode(FontStyle fontStyle)
+    {
+        return $"\x1B[{(int)fontStyle}m";
+    }
+    
     public static string GetColoredString(string message, Color256 foreground, Color256 background = Color256.Default)
     {
         return string.Format(
